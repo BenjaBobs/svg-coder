@@ -1,3 +1,35 @@
+$toolbarHeight: 48px;
+$panelHeight: calc(100vh - $toolbarHeight);
+
+.toolbar {
+  height: $toolbarHeight;
+
+  > * {
+    height: $toolbarHeight !important;
+    width: $toolbarHeight !important;
+
+    * {
+      font-size: 2rem;
+    }
+  }
+}
+
+.svg-view {
+  display: inline-flex;
+  justify-content: flex-end;
+  width: 100%;
+  height: $panelHeight;
+
+  > svg {
+    border: 1px solid black;
+  }
+}
+
+.text-view {
+  height: $panelHeight;
+  width: 50vw;
+}
+
 path {
   &:hover {
     filter: drop-shadow(0px 0px 1px red);
